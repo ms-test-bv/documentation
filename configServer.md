@@ -146,7 +146,6 @@ Para probar que se esté reconociendo nuestra configuración, debemos iniciar lo
 
 Existen varias formas de mejorar nuestros códigos de configuración. La primera es utilizando variables de entorno para obtener datos sencibles como constraseñas. Ejemplo de esto lo pedemos encontrar en la configuración anteriormente vista: `${DB_USER:postgres}`; aquí estamos diciendo que se debe utilizar la variable de entorno `DB_USER` y si no se encuetra usar el valor por defecto `postgres`.
 
-La otra forma y bastante recomendada en spring cloud, es mejorar la forma de conectar entre MS. En nuestro caso utilizamos `http://localhost:9001/`, pero esto trae como problema la posibilidad de perder la conexión hacia el servidor si lo cambiamos de puerto o host. Para ello, debemos utilizar el **Eureka Discovery**; de esta forma podemos cambiar el no recomendado uso de llamadas directes por un balanceador de carga (`lb:config-server`).
 
 # Conclusiones
 
